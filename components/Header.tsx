@@ -30,7 +30,7 @@ const Header = (props: Props) => {
                 activeTab === '#home' && 'link-active'
               }`}
               onClick={handleChangeTab}
-              href="#hero">
+              href="#home">
               Home
             </Link>
           </li>

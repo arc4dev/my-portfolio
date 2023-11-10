@@ -6,9 +6,6 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    fontFamily: {
-      sans: 'Inter, sans-serif',
-    },
     extend: {
       boxShadow: {
         linkShadow: '0px 0px 25px 6px rgb(108,41,217,0.3)',
@@ -22,7 +19,7 @@ const config: Config = {
         action: 'rgb(108, 41, 217, 0.3)',
         actionLight: 'rgb(108, 41, 217)',
         gradient:
-          'radial-gradient(79.69% 102.24% at 100% 100.11%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(89.7% 115.09% at 3.43% 2.75%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), #764ABC',
+          'radial-gradient(79.69% 102.24% at 100% 100.11%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(89.7% 115.09% at 3.43% 2.75%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), rgb(108, 41, 217)',
       },
     },
   },

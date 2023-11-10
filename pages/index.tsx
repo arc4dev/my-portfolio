@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import { client } from '../sanity/lib/client';
+import { Inter } from 'next/font/google';
 
 import About from '../components/About';
 import Contact from '../components/Contact';
@@ -8,6 +9,8 @@ import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 
+const inter = Inter({ subsets: ['latin'] });
+
 type Props = {
   pageInfo: PageInfo;
   skills: Skill[];
@@ -15,10 +18,11 @@ type Props = {
 
 export default function Home({ pageInfo, skills }: Props) {
   return (
-    <div className="bg-bgColor h-screen text-gray-100 snap-mandatory snap-y overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-actionLight/80">
+    <div
+      className={`${inter.className} bg-bgColor h-screen text-gray-100 snap-mandatory snap-y overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-actionLight/80`}>
       <Header />
 
-      <section id="hero" className="snap-start ">
+      <section id="home" className="snap-start ">
         <Hero pageInfo={pageInfo} />
       </section>
 
