@@ -48,7 +48,7 @@ const Hero = ({ pageInfo }: Props) => {
 
       <button
         type="button"
-        className="inline-flex group justify-center items-center font-semibold gap-1.5 z-[10] bg-actionLight py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl hover: cursor-pointer transition duration-200 ease-in-out hover:-translate-y-0.5 hover:opacity-90 active:opacity-70">
+        className="inline-flex group justify-center items-center font-semibold gap-1.5 z-[10] bg-gradient-to-br from-violet-600 to-violet-900 py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl cursor-pointer transition duration-200 ease-in-out hover:-translate-y-0.5 hover:opacity-90 active:opacity-70">
         <span className="hidden group-hover:block transition-all">
           Download CV
         </span>

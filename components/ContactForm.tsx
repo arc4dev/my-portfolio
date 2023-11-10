@@ -49,7 +49,7 @@ const ContactForm = (props: Props) => {
       />
 
       <button
-        className="font-semibold w-full bg-actionLight/60 rounded-md py-3.5"
+        className="font-semibold w-full bg-gradient-to-br from-violet-600 to-violet-900 rounded-md py-3.5 shadow-sm shadow-action hover:shadow-md transition duration-200 ease-in-out hover:opacity-90 active:opacity-70"
         type="submit">
         Submit
       </button>

@@ -18,8 +18,8 @@ const config: Config = {
       colors: {
         action: 'rgb(108, 41, 217, 0.3)',
         actionLight: 'rgb(108, 41, 217)',
-        gradient:
-          'radial-gradient(79.69% 102.24% at 100% 100.11%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(89.7% 115.09% at 3.43% 2.75%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), rgb(108, 41, 217)',
+        actionGradient:
+          'radial-gradient(79.69% 102.24% at 100% 100.11%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(89.7% 115.09% at 3.43% 2.75%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), rgb(108, 41, 217)',
       },
     },
   },

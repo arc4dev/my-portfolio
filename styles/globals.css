@@ -8,6 +8,6 @@
   }
 
   .link-active {
-    @apply bg-actionLight/60 filter backdrop-blur-lg;
+    @apply bg-gradient-to-br from-violet-600 to-violet-900 filter backdrop-blur-lg;
   }
 }
