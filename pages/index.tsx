@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
+import ActiveSectionContextProvider from '../contexts/ActiveSectionContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,30 +19,32 @@ type Props = {
 
 export default function Home({ pageInfo, skills }: Props) {
   return (
-    <div
-      className={`${inter.className} bg-bgColor h-screen text-gray-100 snap-mandatory snap-y overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-actionLight/80`}>
-      <Header />
+    <ActiveSectionContextProvider>
+      <div
+        className={`${inter.className} bg-bgColor h-screen text-gray-100 snap-mandatory snap-y overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-actionLight/80`}>
+        <Header />
 
-      <section id="home" className="snap-start ">
-        <Hero pageInfo={pageInfo} />
-      </section>
+        <section id="home" className="snap-start ">
+          <Hero pageInfo={pageInfo} />
+        </section>
 
-      <section id="about" className="snap-center">
-        <About pageInfo={pageInfo} />
-      </section>
+        <section id="about" className="snap-center">
+          <About pageInfo={pageInfo} />
+        </section>
 
-      <section id="skills" className="snap-center">
-        <Skills skills={skills} />
-      </section>
+        <section id="skills" className="snap-center">
+          <Skills skills={skills} />
+        </section>
 
-      <section id="projects" className="snap-start">
-        <Projects />
-      </section>
+        <section id="projects" className="snap-start">
+          <Projects />
+        </section>
 
-      <section id="contact" className="snap-start">
-        <Contact pageInfo={pageInfo} />
-      </section>
-    </div>
+        <section id="contact" className="snap-start">
+          <Contact pageInfo={pageInfo} />
+        </section>
+      </div>
+    </ActiveSectionContextProvider>
   );
 }
 

@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaAddressCard } from 'react-icons/fa';
 import { HiMail, HiPhone } from 'react-icons/hi';
 
 import ContactForm from './ContactForm';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSection } from '../contexts/ActiveSectionContext';
 
 type Props = {
   pageInfo: PageInfo;
 };
 
 const Contact = ({ pageInfo }: Props) => {
+  const { ref, inView } = useInView({ threshold: 0.8 });
+  const { setActiveSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) setActiveSection('contact');
+  }, [inView, setActiveSection]);
+
   return (
     <motion.div
+      ref={ref}
       className="h-screen relative flex flex-col justify-center items-center gap-8 max-w-5xl px-10 mx-auto text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

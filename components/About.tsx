@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-
-import FunFactsList from './FunFactsList';
 import { urlForImage } from '../sanity/lib/image';
+
+import { useActiveSection } from '../contexts/ActiveSectionContext';
+import { funFacts } from '../data/funFacts';
+import FunFact from './FunFact';
+import { useInView } from 'react-intersection-observer';
 
 type Props = {
   pageInfo: PageInfo;
 };
 
 const About = ({ pageInfo }: Props) => {
+  const { ref, inView } = useInView({ threshold: 0.8 });
+  const { setActiveSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) setActiveSection('about');
+  }, [inView, setActiveSection]);
+
   return (
     <motion.div
+      ref={ref}
       className="h-screen relative flex flex-col justify-center items-center gap-10 max-w-5xl px-10 mx-auto text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -51,7 +62,11 @@ const About = ({ pageInfo }: Props) => {
         </p>
       </div>
 
-      <FunFactsList />
+      <ul className="grid grid-cols-2 grid-rows-2 gap-2 md:grid-cols-4 md:grid-rows-1">
+        {funFacts.map((item) => (
+          <FunFact key={item.title} {...item} />
+        ))}
+      </ul>
     </motion.div>
   );
 };

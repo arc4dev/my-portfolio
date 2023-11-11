@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 import BackgroundCircles from './BackgroundCircles';
@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { urlForImage } from '../sanity/lib/image';
 import { HiDownload } from 'react-icons/hi';
 import SocialLinks from './SocialLinks';
+import { useActiveSection } from '../contexts/ActiveSectionContext';
+import { useInView } from 'react-intersection-observer';
 
 type Props = {
   pageInfo: PageInfo;
@@ -22,8 +24,17 @@ const Hero = ({ pageInfo }: Props) => {
     delaySpeed: 2000,
   });
 
+  const { ref, inView } = useInView({ threshold: 0.8 });
+  const { setActiveSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) setActiveSection('home');
+  }, [inView, setActiveSection]);
+
   return (
-    <div className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-6">
+    <div
+      ref={ref}
+      className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-6">
       <BackgroundCircles />
       <Image
         className="rounded-full w-32 h-32 object-cover shadow-grayShadow"
