@@ -15,7 +15,7 @@ const Header = (props: Props) => {
   return (
     <header className="z-50 fixed top-0 w-full flex justify-center">
       <motion.nav
-        className="text-gray-100 text-[0.75rem] justify-center py-1.5 px-2 items-center my-4 rounded-full backdrop-blur-sm bg-bgColorDarker/70"
+        className="text-gray-100 text-[0.75rem] sm:text-[.85rem] justify-center py-1.5 px-2 items-center my-4 rounded-full backdrop-blur-sm bg-bgColorDarker/70"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -27,7 +27,8 @@ const Header = (props: Props) => {
               <Link
                 className={clsx(
                   'rounded-full px-3.5 py-1.5 hover:text-gray-100/80 transition duration-200 relative',
-                  { 'hidden sm:block': link.name === 'contact' }
+                  { 'hidden sm:block': link.name === 'contact' },
+                  { 'text-gray-100/80': link.name === activeSection }
                 )}
                 onClick={() => setActiveSection(link.name)}
                 href={link.hash}>

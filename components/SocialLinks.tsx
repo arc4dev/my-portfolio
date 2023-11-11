@@ -5,7 +5,7 @@ type Props = {};
 
 const SocialLinks = (props: Props) => {
   return (
-    <div className="mt-2">
+    <div>
       <SocialIcon
         url="https://www.linkedin.com/in/arkadiusz-sroczyk/"
         fgColor="white"

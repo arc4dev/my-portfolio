@@ -54,7 +54,9 @@ const Hero = ({ pageInfo }: Props) => {
           <Cursor cursorColor="#6d28d9" />
         </h1>
 
-        <SocialLinks />
+        <div className="pt-2">
+          <SocialLinks />
+        </div>
       </div>
 
       <button

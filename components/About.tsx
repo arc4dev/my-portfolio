@@ -33,7 +33,7 @@ const About = ({ pageInfo }: Props) => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}>
         <Image
-          className="rounded-full w-44 h-44 object-cover shadow-grayShadow mt-10 sm:mt-0 sm:w-52 sm:h-52 "
+          className="rounded-full w-44 h-44 object-cover shadow-grayShadow mt-10 sm:mt-0 sm:w-52 sm:h-52"
           src={urlForImage(pageInfo.profileImage)
             .width(1600)
             .height(1600)
@@ -45,8 +45,8 @@ const About = ({ pageInfo }: Props) => {
       </motion.div>
 
       <div className="space-y-5 max-w-lg">
-        <h4 className="text-2xl md:text-3xl font-bold">
-          Wanna know me better?
+        <h4 className="text-2xl md:text-3xl font-bold tracking-wide">
+          About me
         </h4>
         <p className="text-xs md:text-sm font-light">
           <span className="block mb-2">
