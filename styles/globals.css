@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
 @layer components {
   .contactInput {
     @apply outline-none rounded-md bg-slate-500/20 resize-none px-6 py-4 border border-gray-700/20 text-gray-500 placeholder:text-gray-500 focus:text-actionLight focus:border-b-actionLight hover:border-b-actionLight transition duration-200 ease-in-out w-full;
   }
+}
+
+.swiper-slide {
+  width: 600px !important;
 }
