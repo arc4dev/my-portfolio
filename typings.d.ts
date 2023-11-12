@@ -22,7 +22,17 @@ interface PageInfo extends SanityBody {
   profileImage: Image;
   heroImage: Image;
   role: string;
-  // socials: Array;
+  socials: Array;
+}
+
+interface Project extends SanityBody {
+  _type: 'project';
+  name: string;
+  description: string;
+  deployedUrl: string;
+  githubUrl: string;
+  technologies: Skill[];
+  image: Image;
 }
 
 interface Skill extends SanityBody {

@@ -14,7 +14,10 @@ const Skill = ({ skill, direction }: Props) => {
       className="group relative cursor-pointer group"
       initial={{ x: position, opacity: 0 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1.3, type: 'spring' }}
+      transition={{
+        duration: 1.2,
+        type: 'spring',
+      }}
       viewport={{ once: true }}>
       <div
         className="rounded-full border border-gray-500 object-cover w-24 h-24 filter group-hover:grayscale transition duration-200 ease-in-out flex justify-center items-center"
