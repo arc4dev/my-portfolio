@@ -15,9 +15,10 @@ const inter = Inter({ subsets: ['latin'] });
 type Props = {
   pageInfo: PageInfo;
   skills: Skill[];
+  projects: Project[];
 };
 
-export default function Home({ pageInfo, skills }: Props) {
+export default function Home({ pageInfo, skills, projects }: Props) {
   return (
     <ActiveSectionContextProvider>
       <div
@@ -37,7 +38,7 @@ export default function Home({ pageInfo, skills }: Props) {
         </section>
 
         <section id="projects" className="snap-start">
-          <Projects />
+          <Projects projects={projects} />
         </section>
 
         <section id="contact" className="snap-start">
@@ -51,11 +52,23 @@ export default function Home({ pageInfo, skills }: Props) {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await client.fetch(`*[_type == "pageInfo"][0]`);
   const skills: Skill[] = await client.fetch(`*[_type == "skill"]`);
+  const projects: Project[] = await client.fetch(`
+  *[_type == "project"]{
+    ...,
+    technologies[]->{
+      name,
+      level,
+      svg,
+      color
+    }
+  }
+`);
 
   return {
     props: {
       pageInfo,
       skills,
+      projects,
     },
     revalidate: 10,
   };

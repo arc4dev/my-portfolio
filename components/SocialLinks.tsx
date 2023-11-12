@@ -5,9 +5,10 @@ type Props = {};
 
 const SocialLinks = (props: Props) => {
   return (
-    <div>
+    <div className="space-x-1">
       <SocialIcon
         url="https://www.linkedin.com/in/arkadiusz-sroczyk/"
+        target="_blank"
         fgColor="white"
         bgColor="transparent"
         className="rounded-full hover:bg-[#0866C2] transition duration-200"
@@ -15,6 +16,7 @@ const SocialLinks = (props: Props) => {
 
       <SocialIcon
         url="https://www.github.com/arc4dev/"
+        target="_blank"
         fgColor="white"
         bgColor="transparent"
         className="rounded-full hover:bg-black transition duration-200"

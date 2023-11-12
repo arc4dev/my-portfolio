@@ -3,16 +3,18 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSection } from '../contexts/ActiveSectionContext';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Project from './Project';
-import Slider from './Slider';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-const Projects = (props: Props) => {
+const Projects = ({ projects }: Props) => {
   const { ref, inView } = useInView({ threshold: 0.8 });
   const { setActiveSection } = useActiveSection();
-
-  const projects = [1, 2, 3, 4, 5];
 
   useEffect(() => {
     if (inView) setActiveSection('projects');
@@ -25,12 +27,31 @@ const Projects = (props: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
-      {/* <div className="relative w-full flex overflow-x-scroll snap-x overflow-y-hidden snap-mandatory z-10">
+      <h3 className="uppercase text-sm tracking-[0.3rem] opacity-40 absolute top-24">
+        My own or team projects that I've worked on
+      </h3>
+
+      <Swiper
+        className="w-full relative"
+        effect="coverflow"
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        // loop={true}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+        }}
+        pagination={{ clickable: true }}
+        modules={[Pagination, EffectCoverflow]}
+        grabCursor={true}>
         {projects.map((project) => (
-          <Project key={project} />
+          <SwiperSlide key={project._id}>
+            <Project project={project} />
+          </SwiperSlide>
         ))}
-      </div> */}
-      <Slider />
+      </Swiper>
 
       <div className="w-full h-[500px] absolute top-[25%] left-0 bg-actionLight/30 -skew-y-12 filter blur-[2px]" />
     </motion.div>

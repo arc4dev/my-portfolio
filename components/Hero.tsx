@@ -17,7 +17,7 @@ const Hero = ({ pageInfo }: Props) => {
   const [text] = useTypewriter({
     words: [
       `Hi, My Name's ${pageInfo?.name}`,
-      'Guy-who-loves-gym.tsx',
+      'Guy-who-likes-gym.tsx',
       '<ButLovesToCodeMore />',
     ],
     loop: true,
@@ -61,12 +61,10 @@ const Hero = ({ pageInfo }: Props) => {
 
       <button
         type="button"
-        className="inline-flex group justify-center items-center font-semibold gap-1.5 z-[10] bg-gradient-to-br from-violet-600 to-violet-900 py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl cursor-pointer transition duration-200 ease-in-out hover:-translate-y-0.5 hover:opacity-90 active:opacity-70">
-        <span className="hidden group-hover:block transition-all">
+        className="inline-flex group justify-center items-center font-semibold z-[10] bg-gradient-to-br from-violet-600 to-violet-900 py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl cursor-pointer transition duration-500 ease-in-out hover:opacity-90 active:opacity-70">
+        <HiDownload />
+        <span className="max-w-0 transition-all ease-in-out duration-500 inline-flex whitespace-nowrap overflow-hidden group-hover:max-w-[8rem] group-hover:pl-1">
           Download CV
-        </span>
-        <span>
-          <HiDownload />
         </span>
       </button>
     </div>
