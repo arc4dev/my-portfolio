@@ -47,7 +47,7 @@ const Contact = ({ pageInfo }: Props) => {
         </div>
       </div>
 
-      <ContactForm />
+      <ContactForm pageInfo={pageInfo} />
 
       <footer className="absolute bottom-5 w-full">
         <p className="text-xs opacity-30">

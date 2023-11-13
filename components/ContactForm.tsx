@@ -8,12 +8,15 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const ContactForm = (props: Props) => {
+const ContactForm = ({ pageInfo }: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+    window.location.href = `mailto:${pageInfo.email}?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message}}`;
   };
 
   return (
@@ -49,7 +52,7 @@ const ContactForm = (props: Props) => {
       />
 
       <button
-        className="font-semibold w-full bg-gradient-to-br from-violet-600 to-violet-900 rounded-md py-3.5 shadow-sm shadow-action hover:shadow-md transition duration-200 ease-in-out hover:opacity-90 active:opacity-70"
+        className="font-semibold w-full bg-gradient-to-br from-violet-600 to-violet-900 rounded-md py-4 shadow-sm shadow-action hover:shadow-md transition duration-200 ease-in-out hover:opacity-90 active:opacity-70"
         type="submit">
         Submit
       </button>

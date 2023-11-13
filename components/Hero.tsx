@@ -59,14 +59,15 @@ const Hero = ({ pageInfo }: Props) => {
         </div>
       </div>
 
-      <button
-        type="button"
+      <a
+        href={`${pageInfo.cvUrl}?dl=cv-arkadiusz-sroczyk.pdf`}
+        download={`${pageInfo.cvUrl}?dl=cv-arkadiusz-sroczyk.pdf`}
         className="inline-flex group justify-center items-center font-semibold z-[10] bg-gradient-to-br from-violet-600 to-violet-900 py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl cursor-pointer transition duration-500 ease-in-out hover:opacity-90 active:opacity-70">
         <HiDownload />
         <span className="max-w-0 transition-all ease-in-out duration-500 inline-flex whitespace-nowrap overflow-hidden group-hover:max-w-[8rem] group-hover:pl-1">
           Download CV
         </span>
-      </button>
+      </a>
     </div>
   );
 };
