@@ -1,23 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaAddressCard } from 'react-icons/fa';
 import { HiMail, HiPhone } from 'react-icons/hi';
 
 import ContactForm from './ContactForm';
-import { useInView } from 'react-intersection-observer';
-import { useActiveSection } from '../contexts/ActiveSectionContext';
+import useSectionInView from '../hooks/useSectionInView';
 
 type Props = {
   pageInfo: PageInfo;
 };
 
 const Contact = ({ pageInfo }: Props) => {
-  const { ref, inView } = useInView({ threshold: 0.8 });
-  const { setActiveSection } = useActiveSection();
-
-  useEffect(() => {
-    if (inView) setActiveSection('contact');
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView('contact');
 
   return (
     <motion.div

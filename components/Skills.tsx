@@ -1,21 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import Skill from './Skill';
-import { useActiveSection } from '../contexts/ActiveSectionContext';
-import { useInView } from 'react-intersection-observer';
+import useSectionInView from '../hooks/useSectionInView';
 
 type Props = {
   skills: Skill[];
 };
 
 const Skills = ({ skills }: Props) => {
-  const { ref, inView } = useInView({ threshold: 0.8 });
-  const { setActiveSection } = useActiveSection();
-
-  useEffect(() => {
-    if (inView) setActiveSection('skills');
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView('skills');
 
   return (
     <motion.div

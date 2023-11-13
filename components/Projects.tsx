@@ -1,24 +1,17 @@
-import React, { useEffect } from 'react';
-
+import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useActiveSection } from '../contexts/ActiveSectionContext';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Project from './Project';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+import Project from './Project';
+import useSectionInView from '../hooks/useSectionInView';
 
 type Props = {
   projects: Project[];
 };
 
 const Projects = ({ projects }: Props) => {
-  const { ref, inView } = useInView({ threshold: 0.8 });
-  const { setActiveSection } = useActiveSection();
-
-  useEffect(() => {
-    if (inView) setActiveSection('projects');
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView('projects');
 
   return (
     <motion.div

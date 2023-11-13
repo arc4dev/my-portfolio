@@ -11,7 +11,6 @@ export const navLinks = [
     name: 'skills',
     hash: '#skills',
   },
-
   {
     name: 'projects',
     hash: '#projects',

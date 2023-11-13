@@ -1,11 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
-import { navLinks } from '../data/navLinks';
-
-type Links = (typeof navLinks)[number]['name'];
+import { SectionName } from '../lib/types';
 
 type ActiveSectionContextType = {
-  activeSection: Links;
-  setActiveSection: React.Dispatch<React.SetStateAction<Links>>;
+  activeSection: SectionName;
+  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
 };
 
 export const ActiveSectionContext =
@@ -16,7 +14,7 @@ const ActiveSectionContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [activeSection, setActiveSection] = useState<Links>('home');
+  const [activeSection, setActiveSection] = useState<SectionName>('home');
 
   return (
     <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>

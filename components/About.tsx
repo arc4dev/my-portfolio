@@ -1,25 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { urlForImage } from '../sanity/lib/image';
-import { useActiveSection } from '../contexts/ActiveSectionContext';
-import { useInView } from 'react-intersection-observer';
 
 import Fact from './Fact';
+import useSectionInView from '../hooks/useSectionInView';
 
 type Props = {
   pageInfo: PageInfo;
 };
 
 const About = ({ pageInfo }: Props) => {
-  const { ref, inView } = useInView({ threshold: 0.8 });
-  const { setActiveSection } = useActiveSection();
-
+  const { ref } = useSectionInView('about');
   const [currFactOpen, setCurrentFactOpen] = useState<number | null>(0);
-
-  useEffect(() => {
-    if (inView) setActiveSection('about');
-  }, [inView, setActiveSection]);
 
   return (
     <motion.div
