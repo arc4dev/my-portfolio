@@ -22,15 +22,15 @@ const Contact = ({ pageInfo }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="h-screen relative flex flex-col justify-center items-center gap-8 max-w-5xl px-10 mx-auto text-center"
+      className="h-screen relative flex flex-col justify-center items-center gap-8 max-w-5xl px-4 mx-auto text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
-      <h4 className="text-3xl font-bold ">
-        Feel free to contact me if you want!
+      <h4 className="text-2xl sm:text-3xl font-bold ">
+        Feel free to contact me <span className="underline">if you want!</span>
       </h4>
 
-      <div className="space-y-1 flex flex-col justify-center items-center">
+      <div className="space-y-1 text-sm sm:text-base flex flex-col justify-center items-center">
         <div className="flex items-center space-x-2">
           <HiPhone className="text-actionLight animate-pulse h-7 w-7" />
           <p>{pageInfo?.phoneNumber}</p>

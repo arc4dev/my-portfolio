@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -21,13 +19,14 @@ const Header = (props: Props) => {
         transition={{
           delay: 1.4,
         }}>
-        <ul className="flex gap-2 justify-center items-center font-semibold tracking-wide py-2.5 px-2 sm:py-1">
+        <ul className="flex gap-2 justify-center items-center font-semibold tracking-wide py-2.5 px-2">
           {navLinks.map((link) => (
-            <li key={link.name}>
+            <li
+              key={link.name}
+              className={clsx({ 'hidden sm:block': link.name === 'contact' })}>
               <Link
                 className={clsx(
                   'rounded-full px-3.5 py-1.5 hover:text-gray-100/80 transition duration-200 relative',
-                  { 'hidden sm:block': link.name === 'contact' },
                   { 'text-gray-100/80': link.name === activeSection }
                 )}
                 onClick={() => setActiveSection(link.name)}
@@ -41,7 +40,7 @@ const Header = (props: Props) => {
                     transition={{
                       type: 'spring',
                       stiffness: 200,
-                      damping: 20,
+                      damping: 21,
                     }}
                   />
                 )}

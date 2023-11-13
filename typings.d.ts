@@ -16,6 +16,7 @@ interface Image {
 interface PageInfo extends SanityBody {
   _type: 'pageInfo';
   name: string;
+  summary: string;
   address: string;
   email: string;
   phoneNumber: string;
@@ -23,6 +24,7 @@ interface PageInfo extends SanityBody {
   heroImage: Image;
   role: string;
   socials: Array;
+  facts: Fact[];
 }
 
 interface Project extends SanityBody {
@@ -41,4 +43,10 @@ interface Skill extends SanityBody {
   svg: string;
   level: number;
   color: string;
+}
+
+interface Skill extends SanityBody {
+  _type: 'fact';
+  title: string;
+  description: string;
 }

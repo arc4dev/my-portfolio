@@ -19,7 +19,7 @@ const ContactForm = (props: Props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-2 w-fit mx-auto">
+      className="flex flex-col gap-2 w-fit mx-auto text-sm sm:text-base">
       <div className="w-full space-y-2 sm:space-x-2 sm:space-y-0 sm:flex">
         <input
           className="contactInput"

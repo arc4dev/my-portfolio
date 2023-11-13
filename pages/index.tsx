@@ -50,7 +50,13 @@ export default function Home({ pageInfo, skills, projects }: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await client.fetch(`*[_type == "pageInfo"][0]`);
+  const pageInfo: PageInfo = await client.fetch(`*[_type == "pageInfo"][0]{
+    ...,
+    facts[]->{
+      title,
+      description
+    }
+  }`);
   const skills: Skill[] = await client.fetch(`*[_type == "skill"]`);
   const projects: Project[] = await client.fetch(`
   *[_type == "project"]{

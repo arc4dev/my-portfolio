@@ -1,5 +1,3 @@
-import { defineField } from 'sanity';
-
 export const pageInfo = {
   name: 'pageInfo',
   title: 'Page Info',
@@ -8,6 +6,11 @@ export const pageInfo = {
     {
       name: 'name',
       title: 'Name',
+      type: 'string',
+    },
+    {
+      name: 'summary',
+      title: 'About me summary',
       type: 'string',
     },
     {
@@ -54,6 +57,17 @@ export const pageInfo = {
         {
           type: 'reference',
           to: { type: 'social' },
+        },
+      ],
+    },
+    {
+      name: 'facts',
+      title: 'Facts',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'fact' },
         },
       ],
     },
