@@ -19,7 +19,7 @@ const SocialLinks = (props: Props) => {
         target="_blank"
         fgColor="white"
         bgColor="transparent"
-        className="rounded-full hover:bg-black transition duration-200"
+        className="rounded-full hover:bg-[#000] transition duration-200"
       />
     </div>
   );

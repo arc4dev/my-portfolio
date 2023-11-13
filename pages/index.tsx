@@ -51,24 +51,26 @@ export default function Home({ pageInfo, skills, projects }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await client.fetch(`*[_type == "pageInfo"][0]{
-    ...,
-    facts[]->{
-      title,
-      description
-    }
-  }`);
+      ...,
+      facts[]->{
+        title,
+        description
+      },
+      "cvUrl": cv.asset->url
+    }`);
+
   const skills: Skill[] = await client.fetch(`*[_type == "skill"]`);
   const projects: Project[] = await client.fetch(`
-  *[_type == "project"]{
-    ...,
-    technologies[]->{
-      name,
-      level,
-      svg,
-      color
-    }
-  }
-`);
+      *[_type == "project"]{
+        ...,
+        technologies[]->{
+          name,
+          level,
+          svg,
+          color
+        }
+      }
+    `);
 
   return {
     props: {

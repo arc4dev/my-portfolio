@@ -50,17 +50,6 @@ export const pageInfo = {
       type: 'string',
     },
     {
-      name: 'socials',
-      title: 'Socials',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: { type: 'social' },
-        },
-      ],
-    },
-    {
       name: 'facts',
       title: 'Facts',
       type: 'array',
@@ -70,6 +59,14 @@ export const pageInfo = {
           to: { type: 'fact' },
         },
       ],
+    },
+    {
+      name: 'cv',
+      title: 'CV',
+      type: 'file',
+      options: {
+        accept: '.pdf',
+      },
     },
   ],
 };

@@ -13,6 +13,14 @@ interface Image {
   };
 }
 
+interface File {
+  _type: 'file';
+  asset: {
+    _ref: string;
+    _type: 'reference';
+  };
+}
+
 interface PageInfo extends SanityBody {
   _type: 'pageInfo';
   name: string;
@@ -23,8 +31,9 @@ interface PageInfo extends SanityBody {
   profileImage: Image;
   heroImage: Image;
   role: string;
-  socials: Array;
   facts: Fact[];
+  cv: File;
+  cvUrl: string;
 }
 
 interface Project extends SanityBody {
@@ -45,7 +54,7 @@ interface Skill extends SanityBody {
   color: string;
 }
 
-interface Skill extends SanityBody {
+interface Fact extends SanityBody {
   _type: 'fact';
   title: string;
   description: string;
