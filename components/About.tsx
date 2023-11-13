@@ -24,7 +24,7 @@ const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="h-screen relative flex flex-col justify-center items-center gap-10 max-w-5xl px-10 mx-auto text-center"
+      className="h-screen relative flex flex-col justify-center items-center gap-10 max-w-5xl px-4 mx-auto text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
@@ -46,10 +46,10 @@ const About = ({ pageInfo }: Props) => {
       </motion.div>
 
       <div className="space-y-5 max-w-lg">
-        <h4 className="text-2xl md:text-3xl font-bold tracking-wide">
-          Hi and welcome👋
+        <h4 className="text-3xl md:text-4xl font-bold tracking-wide">
+          Hi and welcome 👋
         </h4>
-        <p className="text-xs md:text-sm">{pageInfo.summary}</p>
+        <p className="text-sm sm:text-base">{pageInfo.summary}</p>
       </div>
 
       <ul className="flex flex-col gap-2">
