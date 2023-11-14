@@ -5,20 +5,18 @@
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
+@import 'react-vertical-timeline-component/style.min.css';
 
 @layer components {
   .contactInput {
-    @apply outline-none rounded-md bg-slate-500/20 resize-none px-6 py-4 border border-gray-700/20 text-gray-500 placeholder:text-gray-500 focus:text-actionLight focus:border-b-actionLight hover:border-b-actionLight transition duration-200 ease-in-out w-full;
+    @apply outline-none rounded-md dark:bg-slate-500/20 resize-none px-6 py-4 border border-gray-700/20 text-gray-500 placeholder:text-gray-500 focus:text-actionLight focus:border-b-actionLight hover:border-b-actionLight transition duration-200 ease-in-out w-full;
   }
 }
 
-/* must have swiper changes */
-.swiper-slide {
-  width: 340px !important;
+html {
+  --line-color: #e5e7eb;
 }
 
-@media screen and (min-width: 640px) {
-  .swiper-slide {
-    width: 600px !important;
-  }
+html.dark {
+  --line-color: rgba(243, 244, 246, 0.13);
 }

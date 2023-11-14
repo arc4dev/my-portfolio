@@ -29,7 +29,6 @@ const Projects = ({ projects }: Props) => {
         effect="coverflow"
         centeredSlides={true}
         slidesPerView={'auto'}
-        // loop={true}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -40,7 +39,7 @@ const Projects = ({ projects }: Props) => {
         modules={[Pagination, EffectCoverflow]}
         grabCursor={true}>
         {projects.map((project) => (
-          <SwiperSlide key={project._id}>
+          <SwiperSlide key={project._id} className="!w-[340px] sm:!w-[600px]">
             <Project project={project} />
           </SwiperSlide>
         ))}

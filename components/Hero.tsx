@@ -28,11 +28,11 @@ const Hero = ({ pageInfo }: Props) => {
   return (
     <div
       ref={ref}
-      className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-6">
+      className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-6 px-1">
       <BackgroundCircles />
       <Image
-        className="rounded-full w-32 h-32 object-cover shadow-grayShadow"
-        src={urlForImage(pageInfo?.heroImage).width(512).height(512).url()}
+        className="rounded-full w-32 h-32 object-cover dark:shadow-grayShadow shadow-lg"
+        src={urlForImage(pageInfo?.heroImage).url()}
         alt="Me avatar"
         width="512"
         height="512"
@@ -40,7 +40,7 @@ const Hero = ({ pageInfo }: Props) => {
       />
 
       <div className="z-10">
-        <h2 className="text-sm opacity-30 uppercase pb-2 tracking-[0.85rem]">
+        <h2 className="text-xs sm:text-sm opacity-30 uppercase pb-2 tracking-[0.85rem]">
           {pageInfo?.role}
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
@@ -56,7 +56,7 @@ const Hero = ({ pageInfo }: Props) => {
       <a
         href={`${pageInfo.cvUrl}?dl=cv-arkadiusz-sroczyk.pdf`}
         download={`${pageInfo.cvUrl}?dl=cv-arkadiusz-sroczyk.pdf`}
-        className="inline-flex group justify-center items-center font-semibold z-[10] bg-gradient-to-br from-violet-600 to-violet-900 py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl cursor-pointer transition duration-500 ease-in-out hover:opacity-90 active:opacity-70">
+        className="inline-flex group justify-center items-center font-semibold z-[10] bg-gradient-to-br from-violet-600 to-violet-900 py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl cursor-pointer transition duration-500 ease-in-out hover:opacity-90 active:opacity-70 text-gray-100">
         <HiDownload />
         <span className="max-w-0 transition-all ease-in-out duration-500 inline-flex whitespace-nowrap overflow-hidden group-hover:max-w-[8rem] group-hover:pl-1">
           Download CV

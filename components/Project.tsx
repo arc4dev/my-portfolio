@@ -3,35 +3,40 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { SocialIcon } from 'react-social-icons';
 import { urlForImage } from '../sanity/lib/image';
+import { useTheme } from '../contexts/ThemeContext';
 
 type Props = {
   project: Project;
 };
 
 const Project = ({ project }: Props) => {
+  const { theme } = useTheme();
+
   return (
-    <article className="w-[340px] min-h-[320px] h-[420px] sm:w-[600px] sm:h-auto relative bg-bgColorDarker rounded-xl border border-gray-500/20 p-7 overflow-hidden shadow-sm cursor-pointer group hover:shadow-xl transition-all duration-200">
+    <article className="w-[340px] min-h-[320px] h-[420px] sm:w-[600px] sm:h-auto relative bg-white dark:bg-bgColorDarker rounded-xl border border-gray-500/20 p-7 overflow-hidden shadow-sm cursor-pointer group hover:shadow-xl transition-all duration-200">
       <div className="text-start sm:max-w-[47%] gap-3 flex flex-col">
         <div className="flex items-center gap-1">
-          <h4 className="text-2xl font-semibold">{project.name}</h4>
+          <h4 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            {project.name}
+          </h4>
           <SocialIcon
             url={project.githubUrl}
             target="_blank"
-            fgColor="white"
+            fgColor={theme === 'dark' ? '#fff' : '#000'}
             bgColor="transparent"
-            className="rounded-full hover:bg-black transition duration-200"
+            className="rounded-full hover:scale-105 dark:hover:bg-black transition duration-200"
           />
         </div>
 
-        <p className="text-sm text-gray-300 leading-relaxed">
+        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
           {project.description}
         </p>
 
-        <motion.ul className="text-xs flex flex-wrap text-gray-900 gap-2 pt-1">
+        <motion.ul className="text-xs flex flex-wrap text-gray-100 dark:text-gray-900 gap-1.5 pt-1">
           {project.technologies.map((tech) => (
             <li
               key={tech.name}
-              className="bg-gray-100 py-0.5 px-2 rounded-full tracking-widest uppercase shadow-md">
+              className="dark:bg-gray-100 bg-bgColorDarker py-0.5 px-2 rounded-full tracking-widest uppercase shadow-sm dark:shadow-md">
               {tech?.name}
             </li>
           ))}

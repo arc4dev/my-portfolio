@@ -17,17 +17,17 @@ const Fact = ({ title, description, num, currOpen, onOpen }: Props) => {
     <li
       onClick={() => onOpen(num)}
       className={clsx(
-        'bg-bgColorDarker/70 relative p-4 rounded-xl text-center shadow-imageShadow font-light border border-gray-500/20 shadow-md hover:shadow-xl transition duration-200 inline-flex flex-col justify-around items-center cursor-pointer w-full sm:max-w-[640px]',
+        'dark:bg-bgColorDarker/70 relative p-4 rounded-xl text-center shadow-imageShadow border bg-white border-gray-500/20 shadow-sm dark:shadow-md hover:shadow-md dark:hover:shadow-xl transition duration-200 inline-flex flex-col justify-around items-center cursor-pointer w-full sm:max-w-[640px]',
         {
-          'border border-b-actionLight shadow-lg': isOpen,
+          'border dark:border-b-actionLight shadow-lg hover:shadow-lg': isOpen,
         }
       )}>
-      <h4 className="font-semibold text-sm sm:text-[1rem]">{title}</h4>
+      <h4 className="font-semibold text-sm sm:text-lg">{title}</h4>
       <p
         className={clsx(
-          'text-xs sm:text-sm text-gray-300 max-h-0 overflow-hidden transition-all duration-500 ease-in-out',
+          'text-xs sm:text-base dark:text-gray-300 text-gray-700 max-h-0 overflow-hidden transition-all duration-500 ease-in-out',
           {
-            'max-h-[7rem] pt-2': isOpen,
+            'max-h-[10rem] pt-2': isOpen,
           }
         )}>
         {description}
