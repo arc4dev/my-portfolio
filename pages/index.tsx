@@ -9,6 +9,7 @@ import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import ActiveSectionContextProvider from '../contexts/ActiveSectionContext';
+import Experience from '../components/Experience';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,6 +40,10 @@ export default function Home({ pageInfo, skills, projects }: Props) {
 
         <section id="projects" className="snap-start">
           <Projects projects={projects} />
+        </section>
+
+        <section id="experience" className="snap-start">
+          <Experience />
         </section>
 
         <section id="contact" className="snap-start">
