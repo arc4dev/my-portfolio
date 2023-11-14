@@ -20,7 +20,7 @@ const Skill = ({ skill, direction }: Props) => {
       }}
       viewport={{ once: true }}>
       <div
-        className="rounded-full border border-gray-500 object-cover w-24 h-24 filter group-hover:grayscale transition duration-200 ease-in-out flex justify-center items-center"
+        className="rounded-full border border-gray-500/20 object-cover w-24 h-24 filter group-hover:grayscale transition duration-200 ease-in-out flex justify-center items-center"
         style={{
           backgroundColor: skill?.color,
         }}>
@@ -30,13 +30,13 @@ const Skill = ({ skill, direction }: Props) => {
         />
       </div>
 
-      <div className="absolute top-0 text-xs bg-bgColorDarker px-[3px] py-[1px] rounded-md -rotate-12 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 z-[1] transition ease-in-out duration-200">
+      <div className="absolute top-0 text-xs text-gray-100 bg-bgColorDarker px-[3px] py-[1px] rounded-md -rotate-12 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 z-[1] transition ease-in-out duration-200">
         {skill?.name}
       </div>
 
-      <div className="absolute z-0 top-0 w-full h-full opacity-0 bg-white rounded-full group-hover:opacity-80 group-hover:bg transition duration-200 ease-in-out">
+      <div className="absolute z-0 top-0 w-full h-full opacity-0 bg-bgColor dark:bg-white rounded-full group-hover:opacity-80 group-hover:bg transition duration-200 ease-in-out">
         <div className="flex h-full justify-center items-center">
-          <p className="text-2xl font-bold opacity-100 text-black">
+          <p className="text-2xl font-bold opacity-100 text-white dark:text-gray-900">
             {skill?.level}%
           </p>
         </div>

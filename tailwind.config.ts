@@ -23,6 +23,7 @@ const config: Config = {
       },
     },
   },
+  darkMode: 'class',
   plugins: [require('tailwind-scrollbar')],
 };
 export default config;

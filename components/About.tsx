@@ -27,11 +27,8 @@ const About = ({ pageInfo }: Props) => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}>
         <Image
-          className="rounded-full w-44 h-44 object-cover shadow-grayShadow mt-10 sm:mt-0 sm:w-52 sm:h-52"
-          src={urlForImage(pageInfo.profileImage)
-            .width(1600)
-            .height(1600)
-            .url()}
+          className="rounded-full w-44 h-44 object-cover dark:shadow-grayShadow mt-10 sm:mt-0 sm:w-52 sm:h-52 md:w-56 md:h-56 shadow-lg"
+          src={urlForImage(pageInfo.profileImage).url()}
           alt="Me photo"
           width="1600"
           height="1600"

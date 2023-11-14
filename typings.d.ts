@@ -59,3 +59,12 @@ interface Fact extends SanityBody {
   title: string;
   description: string;
 }
+
+interface Experience extends SanityBody {
+  _type: 'experience';
+  title: string;
+  subtitle: string;
+  description: string;
+  date: string;
+  iconType: string;
+}
