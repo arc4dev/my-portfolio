@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Skill = ({ skill, direction }: Props) => {
-  const position = direction === 'left' ? -200 : 200;
+  const position = direction === 'left' ? -100 : 100;
 
   return (
     <motion.li

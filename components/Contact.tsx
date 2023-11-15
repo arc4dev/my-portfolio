@@ -16,7 +16,7 @@ const Contact = ({ pageInfo }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="h-screen relative flex flex-col justify-center items-center gap-8 max-w-5xl px-4 mx-auto text-center"
+      className="h-screen relative flex flex-col justify-center items-center gap-6 max-w-5xl px-4 mx-auto text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>

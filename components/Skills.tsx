@@ -23,12 +23,16 @@ const Skills = ({ skills }: Props) => {
       </h3>
 
       <ul className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-        {skills?.slice(0, skills.length / 2).map((skill) => (
-          <Skill key={skill._id} skill={skill} direction="left" />
-        ))}
-        {skills?.slice(skills.length / 2, skills.length).map((skill) => (
-          <Skill key={skill._id} skill={skill} direction="right" />
-        ))}
+        {skills
+          ?.slice(0, skills.length / 2)
+          .map((skill) => (
+            <Skill key={skill._id} skill={skill} direction="left" />
+          ))}
+        {skills
+          ?.slice(skills.length / 2, skills.length)
+          .map((skill) => (
+            <Skill key={skill._id} skill={skill} direction="right" />
+          ))}
       </ul>
     </motion.div>
   );
