@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiOutlineX } from 'react-icons/hi';
 import { createPortal } from 'react-dom';
@@ -16,14 +16,31 @@ type Props = {
 const NavbarModal = ({ isModalOpen, onCloseModal }: Props) => {
   const { setActiveSection } = useActiveSection();
 
+  useEffect(() => {
+    if (isModalOpen) {
+      const portalRoot = document.getElementById('portal-root');
+      if (!portalRoot) {
+        return;
+      }
+
+      // Create a container for the modal in the portal root
+      const modalContainer = document.createElement('div');
+      portalRoot.appendChild(modalContainer);
+
+      // Cleanup function to remove the modal container when the component unmounts
+      return () => {
+        portalRoot.removeChild(modalContainer);
+      };
+    }
+  }, [isModalOpen]);
+
   const handleClickLink = (linkName: SectionName) => {
     setActiveSection(linkName);
     onCloseModal();
   };
 
-  return createPortal(
-    <>
-      {isModalOpen && (
+  return isModalOpen
+    ? createPortal(
         <motion.div
           className="fixed inset-0 w-full h-full bg-white dark:bg-bgColorDarker z-50 px-4 pt-36 pb-4 flex flex-col justify-between"
           initial={{ x: -640 }}
@@ -49,11 +66,10 @@ const NavbarModal = ({ isModalOpen, onCloseModal }: Props) => {
           <div className="pl-3">
             <SocialLinks />
           </div>
-        </motion.div>
-      )}
-    </>,
-    document.body
-  );
+        </motion.div>,
+        document.getElementById('portal-root')!
+      )
+    : null;
 };
 
 export default NavbarModal;
