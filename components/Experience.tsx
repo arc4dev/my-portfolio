@@ -28,7 +28,7 @@ const Experience = ({ experiences }: Props) => {
         Experience
       </h3>
 
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="" className="mt-20">
         {experiences?.map((item) => (
           <VerticalTimelineElement
             key={item.title}

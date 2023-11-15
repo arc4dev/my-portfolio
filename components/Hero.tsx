@@ -40,10 +40,10 @@ const Hero = ({ pageInfo }: Props) => {
       />
 
       <div className="z-10">
-        <h2 className="text-xs sm:text-sm opacity-30 uppercase pb-2 tracking-[0.85rem]">
+        <h2 className="text-[0.65rem] sm:text-sm opacity-30 uppercase pb-2 tracking-[0.85rem]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold px-10">
           <span>{text}</span>
           <Cursor cursorColor="#6d28d9" />
         </h1>
