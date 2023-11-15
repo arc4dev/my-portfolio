@@ -21,7 +21,7 @@ const Projects = ({ projects }: Props) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
       <h3 className="uppercase text-xs sm:text-sm tracking-[0.3rem] opacity-40 absolute top-24 px-2 hidden sm:block">
-        My own or team projects that I've worked on
+        My own or team projects that I&apos;ve worked on
       </h3>
 
       <Swiper
