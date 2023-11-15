@@ -12,7 +12,7 @@ const Navbar = (props: Props) => {
 
   return (
     <motion.nav
-      className="hidden sm:block bg-gray-200 text-gray-600 text-[0.75rem] sm:text-[0.9rem] justify-center items-center  rounded-full backdrop-blur-sm dark:bg-bgColorDarker/70 dark:text-gray-100"
+      className="hidden sm:block bg-gray-200/70 text-gray-600 text-[0.75rem] sm:text-[0.9rem] justify-center items-center rounded-full backdrop-blur-sm dark:bg-bgColorDarker/70 dark:text-gray-100"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{

@@ -28,7 +28,7 @@ const Hero = ({ pageInfo }: Props) => {
   return (
     <div
       ref={ref}
-      className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-6 px-1">
+      className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-6 px-2">
       <BackgroundCircles />
       <Image
         className="rounded-full w-32 h-32 object-cover dark:shadow-grayShadow shadow-lg"
@@ -40,13 +40,23 @@ const Hero = ({ pageInfo }: Props) => {
       />
 
       <div className="z-10">
-        <h2 className="text-[0.65rem] sm:text-sm opacity-30 uppercase pb-2 tracking-[0.85rem]">
+        <h2 className="text-[0.65rem] sm:text-sm opacity-30 uppercase pb-2 tracking-[0.85rem] px-1">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold px-10">
           <span>{text}</span>
           <Cursor cursorColor="#6d28d9" />
         </h1>
+
+        <ul className="text-[.5rem] sm:text-[.60rem] flex flex-wrap opacity-30 gap-2 mt-3  justify-center">
+          {pageInfo.adjectives.map((item) => (
+            <li
+              key={item}
+              className="border border-gray-600 py-0.5 px-2 rounded-full tracking-widest uppercase shadow-sm dark:shadow-md">
+              {item}
+            </li>
+          ))}
+        </ul>
 
         <div className="pt-2">
           <SocialLinks />

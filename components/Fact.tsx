@@ -27,7 +27,7 @@ const Fact = ({ title, description, num, currOpen, onOpen }: Props) => {
         className={clsx(
           'text-xs sm:text-base dark:text-gray-300 text-gray-700 max-h-0 overflow-hidden transition-all duration-500 ease-in-out',
           {
-            'max-h-[10rem] pt-2': isOpen,
+            'max-h-[20rem] pt-2': isOpen,
           }
         )}>
         {description}

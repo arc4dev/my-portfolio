@@ -17,7 +17,7 @@ const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="h-screen relative flex flex-col justify-start sm:justify-center pt-4 items-center gap-6 max-w-5xl px-4 mx-auto text-center"
+      className="h-screen relative flex flex-col justify-start sm:justify-center pt-4 items-center gap-6 xl:gap-10 max-w-5xl px-4 mx-auto text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
@@ -27,7 +27,7 @@ const About = ({ pageInfo }: Props) => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}>
         <Image
-          className="rounded-full w-40 h-40 object-cover dark:shadow-grayShadow mt-10 sm:mt-0 sm:w-44 sm:h-44 md:w-48 md:h-48 shadow-lg"
+          className="rounded-full w-40 h-40 object-cover dark:shadow-grayShadow mt-10 sm:mt-0 sm:w-44 sm:h-44 md:w-48 md:h-48 xl:w-56 xl:h-56 shadow-lg"
           src={urlForImage(pageInfo.profileImage).url()}
           alt="Me photo"
           width="1600"

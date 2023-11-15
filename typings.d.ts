@@ -34,6 +34,7 @@ interface PageInfo extends SanityBody {
   facts: Fact[];
   cv: File;
   cvUrl: string;
+  adjectives: string[];
 }
 
 interface Project extends SanityBody {

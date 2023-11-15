@@ -50,6 +50,12 @@ export const pageInfo = {
       type: 'string',
     },
     {
+      name: 'adjectives',
+      title: 'Adjectives',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
+    {
       name: 'facts',
       title: 'Facts',
       type: 'array',
