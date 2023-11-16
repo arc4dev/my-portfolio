@@ -13,7 +13,9 @@ const Header = (props: Props) => {
   return (
     <header className="z-50 fixed top-0 w-full flex justify-center px-4 py-3 sm:my-1 bg-transparent">
       <div className="flex justify-between items-center w-full sm:hidden">
-        <button onClick={() => setIsNavModalOpen((v) => !v)}>
+        <button
+          onClick={() => setIsNavModalOpen((v) => !v)}
+          title="HamburgerMenuButton">
           <RxHamburgerMenu className="w-8 h-8" />
         </button>
 

@@ -36,9 +36,9 @@ const About = ({ pageInfo }: Props) => {
       </motion.div>
 
       <div className="space-y-3 max-w-lg">
-        <h4 className="text-2xl sm:text-3xl md:text-3xl font-bold tracking-wide">
+        <h2 className="text-2xl sm:text-3xl font-bold tracking-wide">
           Hi and welcome 👋
-        </h4>
+        </h2>
         <p className="text-xs sm:text-base">{pageInfo.summary}</p>
       </div>
 

@@ -5,6 +5,11 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="robots" content="index, follow" />
+
+        <meta name="theme-color" content="#000000" />
+        <link rel="apple-touch-icon" href="/logo192x192.png" />
         <meta
           name="description"
           content="Arkadiusz Sroczyk portfolio website"

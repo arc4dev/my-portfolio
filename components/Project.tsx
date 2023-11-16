@@ -13,7 +13,7 @@ const Project = ({ project }: Props) => {
   const { theme } = useTheme();
 
   return (
-    <article className="w-[340px] min-h-[320px] h-[420px] sm:w-[600px] sm:h-auto relative bg-white dark:bg-bgColorDarker rounded-xl border border-gray-500/20 p-7 overflow-hidden shadow-sm cursor-pointer group hover:shadow-xl transition-all duration-200">
+    <article className="w-[340px] min-h-[320px] h-[440px] sm:w-[600px] sm:h-auto relative bg-white dark:bg-bgColorDarker rounded-xl border border-gray-500/20 p-7 overflow-hidden shadow-sm cursor-pointer group hover:shadow-xl transition-all duration-200">
       <div className="text-start sm:max-w-[47%] gap-3 flex flex-col">
         <div className="flex items-center gap-1">
           <h4 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
@@ -45,7 +45,7 @@ const Project = ({ project }: Props) => {
 
       <a href={project.deployedUrl} target="_blank" rel="noopener noreferrer">
         <Image
-          className="absolute top-60 -right-0 sm:top-8 sm:-right-40 w-[28.25rem] rounded-t-lg shadow-2xl sm:group-hover:-rotate-2 sm:group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:scale-[1.03] transition duration-200 ease-in-out"
+          className="absolute top-[16.5rem] -right-0 sm:top-8 sm:-right-40 w-[28.25rem] rounded-t-lg shadow-2xl sm:group-hover:-rotate-2 sm:group-hover:-translate-x-2 group-hover:translate-y-2 group-hover:scale-[1.03] transition duration-200 ease-in-out"
           src={urlForImage(project.image).url()}
           alt="ass"
           width={2300}
