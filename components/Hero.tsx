@@ -48,7 +48,7 @@ const Hero = ({ pageInfo }: Props) => {
           <Cursor cursorColor="#6d28d9" />
         </h1>
 
-        <ul className="text-[.5rem] sm:text-[.60rem] flex flex-wrap opacity-30 gap-2 mt-3  justify-center">
+        <ul className="text-[.5rem] sm:text-[.60rem] flex flex-wrap opacity-30 gap-2 mt-3 justify-center">
           {pageInfo.adjectives.map((item) => (
             <li
               key={item}
