@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <meta name="robots" content="noindex" />
         <link rel="manifest" href="/manifest.json" />
 
         <meta
