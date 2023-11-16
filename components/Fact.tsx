@@ -22,7 +22,7 @@ const Fact = ({ title, description, num, currOpen, onOpen }: Props) => {
           'border dark:border-b-actionLight shadow-lg hover:shadow-lg': isOpen,
         }
       )}>
-      <h4 className="font-semibold text-sm sm:text-lg">{title}</h4>
+      <h3 className="font-semibold text-sm sm:text-lg">{title}</h3>
       <p
         className={clsx(
           'text-xs sm:text-base dark:text-gray-300 text-gray-700 max-h-0 overflow-hidden transition-all duration-500 ease-in-out',

@@ -40,9 +40,9 @@ const Hero = ({ pageInfo }: Props) => {
       />
 
       <div className="z-10">
-        <h3 className="text-[0.65rem] sm:text-sm opacity-30 uppercase pb-2 tracking-[0.85rem] px-1">
+        <h4 className="text-[0.65rem] sm:text-sm opacity-30 uppercase pb-2 tracking-[0.85rem] px-1">
           {pageInfo?.role}
-        </h3>
+        </h4>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold px-10">
           <span>{text}</span>
           <Cursor cursorColor="#6d28d9" />
@@ -64,6 +64,7 @@ const Hero = ({ pageInfo }: Props) => {
       </div>
 
       <a
+        rel="noopener noreferrer"
         href={`${pageInfo.cvUrl}?dl=cv-arkadiusz-sroczyk.pdf`}
         download={`${pageInfo.cvUrl}?dl=cv-arkadiusz-sroczyk.pdf`}
         className="inline-flex group justify-center items-center z-[1] font-semibold bg-gradient-to-br from-violet-600 to-violet-900 py-1.5 px-5 rounded-full text-base shadow-sm shadow-action hover:shadow-xl cursor-pointer transition duration-500 ease-in-out hover:opacity-90 active:opacity-70 text-gray-100">
