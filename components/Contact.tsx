@@ -20,9 +20,9 @@ const Contact = ({ pageInfo }: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
-      <h4 className="text-2xl sm:text-3xl font-bold ">
+      <h2 className="text-2xl sm:text-3xl font-bold ">
         Feel free to contact me <span className="underline">if you want!</span>
-      </h4>
+      </h2>
 
       <div className="space-y-1 text-sm sm:text-base flex flex-col justify-center items-center">
         <div className="flex items-center space-x-2">
