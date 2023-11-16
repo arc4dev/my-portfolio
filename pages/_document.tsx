@@ -9,7 +9,7 @@ export default function Document() {
         <meta name="robots" content="index, follow" />
 
         <meta name="theme-color" content="#000000" />
-        <link rel="apple-touch-icon" href="/logo192x192.png" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
         <meta
           name="description"
           content="Arkadiusz Sroczyk portfolio website"
