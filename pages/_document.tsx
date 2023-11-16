@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
-
+        <meta name="theme-color" content="#000000" />
         <meta
           name="description"
           content="Arkadiusz Sroczyk portfolio website"
