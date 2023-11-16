@@ -15,7 +15,7 @@ type Props = {
 const Hero = ({ pageInfo }: Props) => {
   const [text] = useTypewriter({
     words: [
-      `Hi, My Name's ${pageInfo?.name}`,
+      `Hi, My Name is ${pageInfo?.name}`,
       'Guy-who-likes-gym.tsx',
       '<ButLovesToCodeMore />',
     ],
