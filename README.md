@@ -29,4 +29,4 @@ This project is my personal website portfolio. It was built using Next.js, TypeS
 
 ## Live
 
-https://my-portfolio-arc4devs-projects.vercel.app/
+https://www.arc4dev.me
