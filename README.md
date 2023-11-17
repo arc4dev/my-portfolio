@@ -1,4 +1,4 @@
-![Project Image](readme/project-image.png)
+![Project Image](public/img/project-image.png)
 
 ## Project Overview
 
@@ -25,7 +25,7 @@ This project is my personal website portfolio. It was built using Next.js, TypeS
 
 ## Optimization
 
-![Project Optimization](readme/project-optimization.png)
+![Project Optimization](/project-optimization.png)
 
 ## Live
 
