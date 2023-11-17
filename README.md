@@ -21,6 +21,7 @@ This project is my personal website portfolio. It was built using Next.js, TypeS
 - **Sanity**
 - **Swiper**
 - **React Hook Form**
+- **Context API**
 - and many more...
 
 ## Optimization
