@@ -28,6 +28,17 @@ export default function Document() {
           content="https://arc4dev.me/img/project-image.png"
         />
         <meta property="og:site_name" content="Arkadiusz Sroczyk" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Arkadiusz Sroczyk" />
+        <meta
+          name="twitter:description"
+          content="Hi, I'm Arkadiusz Sroczyk. I'm a full-stack developer, CS student and gym addict!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://arc4dev.me/img/project-image.png"
+        />
       </Head>
 
       <body>
