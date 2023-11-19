@@ -24,7 +24,7 @@ const Experience = ({ experiences }: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
-      <div className="h-[80%] w-full overflow-y-auto rounded-md">
+      <div className="max-h-[80%] w-full overflow-y-auto rounded-md">
         <VerticalTimeline lineColor="" className="h-full">
           {experiences?.map((item) => (
             <VerticalTimelineElement
