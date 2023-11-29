@@ -16,7 +16,7 @@ const Projects = ({ projects }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="h-screen flex flex-col relative justify-center items-center gap-10 mx-auto text-center overflow-hidden"
+      className="h-[100svh] flex flex-col relative justify-center items-center gap-10 mx-auto text-center overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
@@ -35,9 +35,9 @@ const Projects = ({ projects }: Props) => {
           depth: 100,
           modifier: 2.5,
         }}
+        grabCursor={true}
         pagination={{ clickable: true }}
-        modules={[Pagination, EffectCoverflow]}
-        grabCursor={true}>
+        modules={[Pagination, EffectCoverflow]}>
         {projects.map((project) => (
           <SwiperSlide key={project._id} className="!w-[340px] sm:!w-[600px]">
             <Project project={project} />

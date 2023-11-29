@@ -45,7 +45,10 @@ const NavbarModal = ({ isModalOpen, onCloseModal }: Props) => {
           className="fixed inset-0 w-full h-full bg-white dark:bg-bgColorDarker z-50 px-4 pt-36 pb-4 flex flex-col justify-between"
           initial={{ x: -640 }}
           animate={{ x: 0 }}
-          transition={{ duration: 0.4, type: 'tween' }}>
+          transition={{
+            duration: 0.4,
+            type: 'tween',
+          }}>
           <button onClick={onCloseModal} className="absolute top-3 right-3">
             <HiOutlineX className="w-10 h-10 text-gray-900 dark:text-gray-100" />
           </button>
