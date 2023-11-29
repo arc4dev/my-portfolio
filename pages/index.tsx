@@ -32,7 +32,7 @@ export default function Home({
     <ThemeContextProvider>
       <ActiveSectionContextProvider>
         <div
-          className={`${inter.className} bg-gray-50 text-gray-900 dark:bg-bgColor h-screen dark:text-gray-100 snap-mandatory snap-y overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-actionLight/80 transition-all duration-300`}>
+          className={`${inter.className} bg-gray-50 text-gray-900 dark:bg-bgColor h-screen dark:text-gray-100 snap-mandatory snap-y overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-actionLight/80 transition-colors duration-300`}>
           <Header />
 
           <section id="home" className="snap-start ">

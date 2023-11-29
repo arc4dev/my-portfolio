@@ -11,13 +11,7 @@ const Navbar = (props: Props) => {
   const { activeSection, setActiveSection } = useActiveSection();
 
   return (
-    <motion.nav
-      className="hidden sm:block bg-gray-200/70 text-gray-600 text-[0.75rem] sm:text-[0.9rem] justify-center items-center rounded-full backdrop-blur-sm dark:bg-bgColorDarker/70 dark:text-gray-100"
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        delay: 1.4,
-      }}>
+    <nav className="hidden sm:block bg-gray-200/70 text-gray-600 text-[0.75rem] sm:text-[0.9rem] justify-center items-center rounded-full backdrop-blur-sm dark:bg-bgColorDarker/70 dark:text-gray-100">
       <ul className="flex gap-2 justify-center items-center font-semibold tracking-wide py-2.5 px-2">
         {navLinks.map((link) => (
           <li key={link.name}>
@@ -48,7 +42,7 @@ const Navbar = (props: Props) => {
           </li>
         ))}
       </ul>
-    </motion.nav>
+    </nav>
   );
 };
 

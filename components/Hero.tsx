@@ -28,7 +28,7 @@ const Hero = ({ pageInfo }: Props) => {
   return (
     <div
       ref={ref}
-      className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-6 px-2">
+      className="h-[100svh] flex flex-col justify-center items-center text-center overflow-hidden space-y-6 px-2">
       <BackgroundCircles />
       <Image
         className="rounded-full w-32 h-32 object-cover dark:shadow-grayShadow shadow-lg"

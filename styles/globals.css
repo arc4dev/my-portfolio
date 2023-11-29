@@ -20,3 +20,7 @@ html {
 html.dark {
   --line-color: rgba(243, 244, 246, 0.13);
 }
+
+.swiper-pagination-bullet-active {
+  background: rgb(108, 41, 217);
+}

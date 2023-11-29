@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoIosSend } from 'react-icons/io';
-import Navbar from './Navbar';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import Navbar from './Navbar';
 import NavbarModal from './NavbarModal';
 
 type Props = {};
@@ -11,7 +13,13 @@ const Header = (props: Props) => {
   const [isNavModalOpen, setIsNavModalOpen] = useState<true | false>(false);
 
   return (
-    <header className="z-50 fixed top-0 w-full flex justify-center px-4 py-3 sm:my-1 bg-transparent">
+    <motion.header
+      className="z-50 fixed top-0 w-full flex justify-center px-4 py-3 sm:my-1 bg-transparent"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 1.4,
+      }}>
       <div className="flex justify-between items-center w-full sm:hidden">
         <button
           onClick={() => setIsNavModalOpen((v) => !v)}
@@ -32,7 +40,7 @@ const Header = (props: Props) => {
         isModalOpen={isNavModalOpen}
         onCloseModal={() => setIsNavModalOpen(false)}
       />
-    </header>
+    </motion.header>
   );
 };
 

@@ -20,7 +20,7 @@ const Experience = ({ experiences }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="h-screen relative flex flex-col justify-center items-center gap-10 max-w-5xl px-3 sm:px-4 mx-auto text-center"
+      className="h-[100svh] relative flex flex-col justify-center items-center gap-10 max-w-5xl px-3 sm:px-4 mx-auto text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
