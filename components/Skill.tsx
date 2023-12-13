@@ -30,7 +30,7 @@ const Skill = ({ skill, direction }: Props) => {
         />
       </div>
 
-      <div className="absolute top-0 text-xs text-gray-100 bg-bgColorDarker px-[3px] py-[1px] rounded-md -rotate-12 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 z-[1] transition ease-in-out duration-200">
+      <div className="absolute top-0 text-xs sm:text-sm text-gray-100 bg-bgColorDarker px-[3px] py-[1px] rounded-md -rotate-12 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 z-[1] transition ease-in-out duration-200">
         {skill?.name}
       </div>
 
