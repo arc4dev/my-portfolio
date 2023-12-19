@@ -6,6 +6,7 @@ This project is my personal website portfolio. It was built using Next.js, TypeS
 
 ## Features
 
+- Me 😁
 - ISG - Incremental Static Generation
 - PWA friendly
 - Content Management System 
