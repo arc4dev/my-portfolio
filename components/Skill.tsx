@@ -20,12 +20,12 @@ const Skill = ({ skill, direction }: Props) => {
       }}
       viewport={{ once: true }}>
       <div
-        className="rounded-full border border-gray-500/20 object-cover w-24 h-24 filter group-hover:grayscale transition duration-200 ease-in-out flex justify-center items-center"
+        className="rounded-full border border-gray-500/20 object-cover w-20 h-20 sm:w-24 sm:h-24 filter group-hover:grayscale transition duration-200 ease-in-out flex justify-center items-center"
         style={{
           backgroundColor: skill?.color,
         }}>
         <div
-          className="w-14"
+          className="sm:w-14 w-12"
           dangerouslySetInnerHTML={{ __html: skill?.svg }}
         />
       </div>

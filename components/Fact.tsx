@@ -23,15 +23,21 @@ const Fact = ({ title, description, num, currOpen, onOpen }: Props) => {
         }
       )}>
       <h3 className="font-semibold text-sm sm:text-lg">{title}</h3>
-      <p
+      <div
         className={clsx(
-          'text-xs sm:text-sm dark:text-gray-300 text-gray-700 max-h-0 overflow-hidden transition-all duration-500 ease-in-out',
+          'overflow-hidden max-h-0 transition-all duration-[500ms] ease-in-out',
           {
-            'max-h-[20rem] pt-2': isOpen,
+            'max-h-[20rem]': isOpen,
           }
         )}>
-        {description}
-      </p>
+        <p
+          className={clsx(
+            'text-xs sm:text-sm dark:text-gray-300 text-gray-700 pt-2 '
+          )}>
+          {description}
+        </p>
+      </div>
+
       {isOpen ? (
         <HiMinus className="absolute top-[17px] right-3" />
       ) : (

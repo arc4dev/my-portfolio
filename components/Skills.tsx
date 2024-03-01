@@ -18,7 +18,7 @@ const Skills = ({ skills }: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}>
-      <h4 className="uppercase text-xs sm:text-sm tracking-[0.3rem] opacity-40 absolute top-24 px-2">
+      <h4 className="uppercase text-xs sm:text-sm tracking-[0.3rem] opacity-40 absolute hidden sm:block top-24 px-2">
         Hover over to see profeciency
       </h4>
 

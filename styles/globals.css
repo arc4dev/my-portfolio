@@ -9,7 +9,7 @@
 
 @layer components {
   .contactInput {
-    @apply outline-none rounded-md dark:bg-slate-500/20 resize-none px-6 py-4 border border-gray-700/20 text-gray-500 placeholder:text-gray-500 focus:text-actionLight focus:border-b-actionLight hover:border-b-actionLight transition duration-200 ease-in-out w-full;
+    @apply outline-none rounded-md dark:bg-slate-500/20 resize-none px-4 py-3 sm:px-6 sm:py-4 border border-gray-700/20 text-gray-500 placeholder:text-gray-500 focus:text-actionLight focus:border-b-actionLight hover:border-b-actionLight transition duration-200 ease-in-out w-full;
   }
 }
 
